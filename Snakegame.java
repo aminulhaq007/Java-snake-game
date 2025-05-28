@@ -23,6 +23,12 @@ public void startGame() {
     timer = new javax.swing.Timer(150, this);
     timer.start();
 }
+private Point food;
+private void spawnFood() {
+    int x = (int)(Math.random() * (width / boxSize));
+    int y = (int)(Math.random() * (height / boxSize));
+    food = new Point(x, y);
+}
 
 
 
