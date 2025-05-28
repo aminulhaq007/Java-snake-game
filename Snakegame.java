@@ -10,6 +10,19 @@ public class SnakeGame {
         frame.setVisible(true);
     }
 }
+private LinkedList<Point> snake;
+private char direction = 'R';
+private boolean running = false;
+private javax.swing.Timer timer;
+
+public void startGame() {
+    snake = new LinkedList<>();
+    snake.add(new Point(5, 5));
+    direction = 'R';
+    running = true;
+    timer = new javax.swing.Timer(150, this);
+    timer.start();
+}
 
 
 
